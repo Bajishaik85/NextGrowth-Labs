@@ -1,0 +1,231 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="./styles.css">
+
+</head>
+
+<body>
+    
+
+
+
+    <div class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 bg-white border-bottom box-shadow">
+        <h5 class="my-0 mr-md-auto font-weight-normal">NextGrowth Labs</h5>
+        <nav class="my-2 my-md-0 mr-md-3">
+            <a class="p-2 text-dark" href="#">Features</a>
+            <a class="p-2 text-dark" href="#">Enterprise</a>
+            <a class="p-2 text-dark" href="#">Support</a>
+            <a class="p-2 text-dark" href="#">Pricing</a>
+        </nav>
+        <a class="btn btn-outline-primary" href="#">Sign up</a>
+    </div>
+
+    <div class="container pricing-header px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
+        <h1 class="display-4">Pricing</h1>
+        <p class="lead">Quickly build an effective pricing table for your potential customers with this Bootstrap
+            example. It's built with default Bootstrap components and utilities with little customization.</p>
+    </div>
+
+    <!-- <div class="modal fade" id="formModal">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title">Form details</h4>
+                    <button type="button" class="close" data-dismiss="modal">×</button>
+                </div>
+                <div class="modal-body">
+                    <form action="https://forms.maakeetoo.com/formapi/590" method="post">
+                        <input class="form-control py-2 my-3" type="text" name="firstname">
+                        <input class="form-control py-2 my-3" type="text" name="lastname">
+                        <input class="form-control py-2 my-3" type="email" name="email">
+                        <textarea class="form-control py-2 my-3" type="text" name="message"
+                            placeholder="Order Comments"></textarea>
+                        <input type="hidden" id="selectedPriceValue" name="selectedField">
+
+                        <button class="btn btn-primary py-2 mr-3" type="submit">Submit</button>
+                        <button class="btn btn-danger py-2" type="reset">Reset</button>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </div> -->
+
+    <div class="container">
+        <div class="mb-5 d-flex justify-content-center flex-column">
+            <label for="userRange" class="form-label d-flex align-items-center">Select number of users: &nbsp; <b
+                    style="font-size: x-large;" id="selectedUser">0</b></label>
+            <input type="range" class="form-range" min="0" max="30" step="1" id="userRange" value="0">
+        </div>
+        <div class="card-deck mb-3 text-center">
+            <div class="card mb-4 box-shadow border border-primary" id="card1">
+                <div class="card-header bg-primary">
+                    <h4 class="my-0 font-weight-normal">Free</h4>
+                </div>
+                <div class="card-body">
+                    <h1 class="card-title pricing-card-title">$0 <small class="text-muted">/ mo</small></h1>
+                    <ul class="list-unstyled mt-3 mb-4">
+                        <li>10 users included</li>
+                        <li>2 GB of storage</li>
+                        <li>Email support</li>
+                        <li>Help center access</li>
+                    </ul>
+                    <button type="button" data-bs-toggle="modal"
+                        data-bs-target="#staticBackdrop" id="buttonEvent1" class="btn btn-lg btn-block btn-outline-primary"
+                        data-toggle="modal" data-target="#formModal" value="0">
+                        Select the Plan
+                    </button>
+
+                    <!-- Modal -->
+                    <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false"
+                        tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h1 class="modal-title fs-5" id="staticBackdropLabel">Fill Your Details</h1>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                        aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <form action ="https://forms.maakeetoo.com/formsdata/590" method="post">
+ 
+                                        <label for="exampleFormControlInput1" class="form-label">Enter Your name</label>
+                                        <input type="text" class="form-control" id="exampleFormControlInput1"
+                                            placeholder="Enter your Name" name="firstname" required>
+                                            <label for="exampleFormControlInput2" class="form-label">Email address</label>
+                                        <input type="email" class="form-control" id="exampleFormControlInput2"
+                                            placeholder="Enter Your Email"name="email" required>
+                                            <label for="exampleFormControlTextarea1" class="form-label">Order Comments</label>
+                                            <textarea class="form-control" id="exampleFormControlTextarea1"
+                                                rows="3" name="message"></textarea>
+                                        <button type="button" class="btn btn-secondary"
+                                        data-bs-dismiss="modal">Close</button>
+                                    
+                                    <button type="submit" class="btn btn-primary m-2">Submit</button>
+                                   </form>
+                                    
+                                    
+                                    
+                                </div>
+                                
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+            <div class="card mb-4 box-shadow" id="card2">
+                <div class="card-header">
+                    <h4 class="my-0 font-weight-normal">Pro</h4>
+                </div>
+                <div class="card-body">
+                    <h1 class="card-title pricing-card-title">$15 <small class="text-muted">/ mo</small></h1>
+                    <ul class="list-unstyled mt-3 mb-4">
+                        <li>20 users included</li>
+                        <li>10 GB of storage</li>
+                        <li>Priority email support</li>
+                        <li>Help center access</li>
+                    </ul>
+                    <button data-bs-toggle="modal"
+                        data-bs-target="#staticBackdrop"
+                        data-toggle="modal" data-target="#formModal" id="buttonEvent2" class="btn btn-lg btn-block btn-primary" data-toggle="modal"
+                        data-target="#formModal" value="15">Get started</button>
+                </div>
+            </div>
+            <div class="card mb-4 box-shadow" id="card3">
+                <div class="card-header">
+                    <h4 class="my-0 font-weight-normal">Enterprise</h4>
+                </div>
+                <div class="card-body">
+                    <h1 class="card-title pricing-card-title">$29 <small class="text-muted">/ mo</small></h1>
+                    <ul class="list-unstyled mt-3 mb-4">
+                        <li>30 users included</li>
+                        <li>15 GB of storage</li>
+                        <li>Phone and email support</li>
+                        <li>Help center access</li>
+                    </ul>
+                    <button data-bs-toggle="modal"
+                    data-bs-target="#staticBackdrop"
+                     data-target="#formModal" id="buttonEvent3" type="button" class="btn btn-lg btn-block btn-primary" data-toggle="modal"
+                        data-target="#formModal" value="29">Contact us</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="d-flex justify-content-center flex-wrap" id="imgGalery">
+        </div>
+        <!-- loading -->
+        <div class="justify-content-center align-items-center d-none" id="loader">
+            
+            <div class="d-flex justify-content-center text-primary">
+                <div class="spinner-border" role="status">
+                    <span class="visually-hidden">Loading...</span>
+                </div>
+            </div>
+        </div>
+
+        <footer class="pt-4 my-md-5 pt-md-5 border-top" id="footer">
+            <div class="row">
+                <div class="col-12 col-md">
+                    <img class="mb-2" src="https://getbootstrap.com/docs/4.0/assets/brand/bootstrap-solid.svg" alt=""
+                        width="24" height="24">
+                    <small class="d-block mb-3 text-muted">© 2017-2018</small>
+                </div>
+                <div class="col-6 col-md">
+                    <h5>Features</h5>
+                    <ul class="list-unstyled text-small">
+                        <li><a class="text-muted" href="#">Cool stuff</a></li>
+                        <li><a class="text-muted" href="#">Random feature</a></li>
+                        <li><a class="text-muted" href="#">Team feature</a></li>
+                        <li><a class="text-muted" href="#">Stuff for developers</a></li>
+                        <li><a class="text-muted" href="#">Another one</a></li>
+                        <li><a class="text-muted" href="#">Last time</a></li>
+                    </ul>
+                </div>
+                <div class="col-6 col-md">
+                    <h5>Resources</h5>
+                    <ul class="list-unstyled text-small">
+                        <li><a class="text-muted" href="#">Resource</a></li>
+                        <li><a class="text-muted" href="#">Resource name</a></li>
+                        <li><a class="text-muted" href="#">Another resource</a></li>
+                        <li><a class="text-muted" href="#">Final resource</a></li>
+                    </ul>
+                </div>
+                <div class="col-6 col-md">
+                    <h5>About</h5>
+                    <ul class="list-unstyled text-small">
+                        <li><a class="text-muted" href="#">Team</a></li>
+                        <li><a class="text-muted" href="#">Locations</a></li>
+                        <li><a class="text-muted" href="#">Privacy</a></li>
+                        <li><a class="text-muted" href="#">Terms</a></li>
+                    </ul>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+        integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+        crossorigin="anonymous"></script>
+
+    <script src="./task1.js"></script>
+</body>
+
+</html>
